@@ -34,7 +34,9 @@ import {
   SliderItem,
   Pricing,
   PricingItem,
-  PricingList
+  PricingList,
+  Faq,
+  FaqItem
 } from './components';
 import './App.css';
 import './fonts.css';
@@ -261,6 +263,26 @@ function App() {
           <PricingList text={`250 templates`} />
         </PricingItem>
       </Pricing>
+      <Faq
+        header={`Some frequently asked questions for you`}
+        header2={`Didn’t find what your are looking for ?`}
+        note2={`Didn’t find answers ? Feel free to reach us for more info and details.`}
+        href={`#`}
+        hrefTitle={`Contact us`}
+      >
+        <FaqItem
+          title={`What is web marketing ?`}
+          description={`Web marketing refers to a broad category of advertising that takes many different forms, but generally involves any marketing activity conducted online. Marketers have shifted their efforts online because it tends to be significantly less expensive. refers to a broad category of advertising that takes many different forms, but generally involves any marketing activity conducted online. Marketers have shifted their efforts online because it tends to be significantly less expensive.`}
+        />
+        <FaqItem
+          title={`What is digital advertising ?`}
+          description={`Digital advertising, also called Internet advertising ("Internet marketing") is when businesses leverage Internet technologies to deliver promotional advertisements to consumers. Digital advertising includes promotional advertisements and messages delivered through email, social media websites, online advertising on search engines, banner ads on mobile or Web sites and affiliates programs.`}
+        />
+        <FaqItem
+          title={`What is Internet marketing ?`}
+          description={` Internet marketing, or online marketing, refers to advertising and marketing efforts that use the Web and email to drive direct sales via electronic commerce, in addition to sales leads from Web sites or emails. Internet marketing and online advertising efforts are typically used in conjunction with traditional types of advertising such as radio, television, newspapers and magazines. Specialized Areas of Internet Marketing Internet marketing can also be broken down into more specialized areas such as Web marketing.`}
+        />
+      </Faq>
     </div>
   );
 }
