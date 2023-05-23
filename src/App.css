@@ -548,7 +548,7 @@ p.lead {
 
 /* Pricing section*/
 
-.table {
+/* .table {
   background: #ffffff none repeat scroll 0 0;
   border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -557,13 +557,13 @@ p.lead {
   -o-border-radius: 4px;
   border: 3px solid #4772d9;
   position: relative;
-}
-.table h6 {
+} */
+/* .table h6 {
   background: #4772d9 none repeat scroll 0 0;
   color: #ffffff;
   font-size: 20px;
   padding: 20px 0;
-}
+} */
 .block-price {
   color: #4772d9;
 }

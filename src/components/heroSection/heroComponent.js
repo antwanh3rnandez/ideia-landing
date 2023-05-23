@@ -1,15 +1,13 @@
 // import logo from '../../assets/img/logo.svg';
-import '../../../src/App.css';
-import '../../../src/fonts.css';
 import screen from '../../../src/assets/img/1.png';
 
-export const Hero = ({ logo, children }) => {
+export const Hero = ({ hero, description, action, screen, urlYoutube, logoTopBar, children }) => {
   return (
     <section className="hero bg-dark-blue">
       <header className="header default">
         <div className="left-part">
           <a href="#">
-            <img src={logo} className="max-h-16" />
+            <img src={logoTopBar} className="max-h-16" />
           </a>
         </div>
         <div className="right-part">
@@ -25,13 +23,25 @@ export const Hero = ({ logo, children }) => {
           </nav>
         </div>
       </header>
-      <HeaderTexts 
-          hero={`Simple modern easy to use`}
-          description={`Beautiful simple and modern responsive landing page to generate revenues for your business.`}
-          action={`Purchase now`}
-          screen={screen}
-          urlYoutube={`https://youtu.be/Mk6aW39bMtg`}
-        />
+      <div className="bottom-0 left-0 absolute right-0 top-0 h-full">
+        <div className="container text-white relative text-center top-1/2 transform -translate-y-1/4 mt-16 mx-auto max-w-3xl">
+          <div className="text-center">
+            <div className="mx-auto">
+              <h1 className="text-6xl md:text-4xl lg:text-6xl text-white font-extralight">{hero}</h1>
+              <p className="mx-auto max-w-md text-white text-lg md:text-ml lg:text-xl leading-relaxed mt-4 font-light">{description}</p>
+              <a href="#" className="inline-block rounded-sm relative bg-dark-red-pantone text-white hover:bg-red-500 px-9 py-5 text-base mt-4">{action}</a>
+            </div>
+          </div>
+          <div className="mt-16">
+            <div className="block-media page mx-auto">
+              <div className="mb-64">
+                <img className='rounded-md shadow-xl shadow-gray-400' src={screen} alt="" />
+              </div>
+              <a href={urlYoutube} className="play-btn rounded-full" data-type="youtube"></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

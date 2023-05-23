@@ -1,3 +1,11 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper/core";
+SwiperCore.use([Autoplay, Navigation, Pagination]);
+
 import logo from './assets/img/logo.svg';
 import screen from './assets/img/1.png';
 import screen2 from './assets/img/4.png';
@@ -5,22 +13,28 @@ import testi from './assets/img/testimonials/1.png';
 import testi2 from './assets/img/testimonials/2.png';
 import testi3 from './assets/img/testimonials/3.png';
 import testi4 from './assets/img/testimonials/4.png';
+import slider from './assets/img/5.png';
+import slider2 from './assets/img/3.png';
 import {
   Hero,
   Nav,
   Li,
   LiExternal,
   LiButton,
-  HeaderTexts,
   About,
   AboutItems,
   AboutItem,
   Trial,
-  Testimonial,
   Features,
   FeaturesList,
   Testimonials,
-  TestimonialItem
+  TestimonialItem,
+  Gallery,
+  Slider,
+  SliderItem,
+  Pricing,
+  PricingItem,
+  PricingList
 } from './components';
 import './App.css';
 import './fonts.css';
@@ -29,18 +43,48 @@ import './fonts.css';
 function App() {
   return (
     <div className="App">
-      <Hero logo={logo}>
-        <Nav>
-          <LiExternal href="#" iconClass={"icon-resize-full-3"}></LiExternal>
-          <Li href={`#`} title={`About`}></Li>
-          <Li href={`#`} title={`Features`}></Li>
-          <Li href={`#`} title={`Gallery`}></Li>
-          <Li href={`#`} title={`Pricing`}></Li>
-          <Li href={`#`} title={`Faq`}></Li>
-          <LiButton href={`#`} title={`Login`} iconName={`lock`} ></LiButton>
-          <Li href={`#`} title={`Contact Us`}></Li>
-        </Nav>
-        
+      <Hero 
+        hero={`Simple modern easy to use`}
+        description={`Beautiful simple and modern responsive landing page to generate revenues for your business.`}
+        action={`Purchase now`}
+        screen={screen}
+        urlYoutube={`https://youtu.be/Mk6aW39bMtg`}
+        logoTopBar={logo}>
+          <Nav>
+            <LiExternal 
+              href="#" 
+              iconClass={"icon-resize-full-3"}
+            />
+            <Li 
+              href={`#`} 
+              title={`About`}
+            />
+            <Li 
+              href={`#`} 
+              title={`Features`}
+            />
+            <Li 
+              href={`#`} 
+              title={`Gallery`}
+            />
+            <Li 
+              href={`#`} 
+              title={`Pricing`}
+            />
+            <Li 
+              href={`#`} 
+              title={`Faq`}
+            />
+            <LiButton 
+              href={`#`} 
+              title={`Login`} 
+              iconName={`lock`}
+            />
+            <Li 
+              href={`#`} 
+              title={`Contact Us`}
+            />
+          </Nav>
       </Hero>
       <About 
         header={`Beautiful & simple easy to use<br />landing page`} 
@@ -156,7 +200,67 @@ function App() {
             testimonial={`Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.`}
           />
       </Testimonials>
-
+      <Gallery
+        header={`We are excited about our new product<br />Here's a sneak peek`}
+      >
+        <Swiper
+            spaceBetween={5}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3000 }} // Configuración del autoplay
+        >
+            <SwiperSlide>
+            <img src={slider} alt={`alt`} />
+            </SwiperSlide>
+            <SwiperSlide>
+            <img src={slider2} alt={`alt`} />
+            </SwiperSlide>
+        </Swiper>
+      </Gallery>
+      <Pricing
+        header={`Quick look at our scalable plans & pricing`}
+        description={`Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+        rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.`}
+        note={`Not sure which plan is right for you? Feel free to <a className="text-dark-red-pantone" href="#contact">contact us</a> for more info and details.`}
+      >
+        <PricingItem
+          title={`Standard`}
+          price={`10`}
+          time={`mo`}
+          href={`#`}
+          hrefTitle={`Sign up now`}
+        >
+          <PricingList text={`250 templates`} />
+          <PricingList text={`Web event tracking`} />
+          <PricingList text={`Campaign consulting`} />
+          <PricingList text={`250 templates`} />
+        </PricingItem>
+        <PricingItem
+          title={`Professional`}
+          price={`30`}
+          time={`mo`}
+          href={`#`}
+          hrefTitle={`Sign up now`}
+        >
+          <PricingList text={`250 templates`} />
+          <PricingList text={`Web event tracking`} />
+          <PricingList text={`Campaign consulting`} />
+          <PricingList text={`250 templates`} />
+        </PricingItem>
+        <PricingItem
+          title={`Entreprise`}
+          price={`40`}
+          time={`mo`}
+          href={`#`}
+          hrefTitle={`Sign up now`}
+        >
+          <PricingList text={`250 templates`} />
+          <PricingList text={`Web event tracking`} />
+          <PricingList text={`Campaign consulting`} />
+          <PricingList text={`250 templates`} />
+        </PricingItem>
+      </Pricing>
     </div>
   );
 }

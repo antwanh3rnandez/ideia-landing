@@ -3,7 +3,7 @@ import screen2 from '../../../src/assets/img/4.png';
 
 export const Features = ({img, header, href, hrefTitle, children}) => {
     return(
-        <section id="features" className="bg-gray-200 pt-120 pb-120">
+        <section id="features" className="bg-gray-100 pt-120 pb-120">
             {/* Container */}
             <div className="container mx-auto justify-center">
                 {/* Row */}

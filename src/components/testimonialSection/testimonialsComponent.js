@@ -1,12 +1,6 @@
-import { Children } from 'react';
-import testi from '../../../src/assets/img/testimonials/1.png';
-import testi2 from '../../../src/assets/img/testimonials/2.png';
-import testi3 from '../../../src/assets/img/testimonials/3.png';
-import testi4 from '../../../src/assets/img/testimonials/4.png';
-
 export const Testimonials = ({header, description, href, hrefTitle, children}) => {
     return(
-        <section className="justify-center mt-32">
+        <section className="justify-center mt-32 mb-24">
             <div className="container mx-auto">
                <div className="flex flex-row items-center px-40">
                   <div className="w-1/3 mr-24">
