@@ -1,6 +1,10 @@
 import logo from './assets/img/logo.svg';
 import screen from './assets/img/1.png';
 import screen2 from './assets/img/4.png';
+import testi from './assets/img/testimonials/1.png';
+import testi2 from './assets/img/testimonials/2.png';
+import testi3 from './assets/img/testimonials/3.png';
+import testi4 from './assets/img/testimonials/4.png';
 import {
   Hero,
   Nav,
@@ -14,7 +18,9 @@ import {
   Trial,
   Testimonial,
   Features,
-  FeaturesList
+  FeaturesList,
+  Testimonials,
+  TestimonialItem
 } from './components';
 import './App.css';
 import './fonts.css';
@@ -116,6 +122,40 @@ function App() {
             description={`Sed ut perspiciatis unde omnis`}  
           />
       </Features>
+      <Testimonials 
+        header={`Why customers love <br>our great product`}
+        description={`Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.`}
+        href={`#`}
+        hrefTitle={`Pricing info`}>
+          <TestimonialItem
+            side={`right`} //only right or left
+            image={testi}
+            name={`Hana Doe`}
+            position={`Mutation Media`}
+            testimonial={`Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.`}
+          />
+          <TestimonialItem
+            side={`left`}
+            image={testi2}
+            name={`Jenna Doe`}
+            position={`Mutation Media`}
+            testimonial={`Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.`}
+          />
+          <TestimonialItem
+            side={`right`}
+            image={testi3}
+            name={`Cari Doe`}
+            position={`Mutation Media`}
+            testimonial={`Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.`}
+          />
+          <TestimonialItem
+            side={`left`}
+            image={testi4}
+            name={`Adam Doe`}
+            position={`Mutation Media`}
+            testimonial={`Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.`}
+          />
+      </Testimonials>
 
     </div>
   );
